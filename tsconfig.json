@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+      "target": "ESNext",
+      "module": "esnext",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "removeComments": true,
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "esModuleInterop": true,
+      "newLine": "lf",
+      "outDir": "dist"
+  }
+}
