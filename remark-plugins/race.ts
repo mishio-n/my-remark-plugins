@@ -6,12 +6,13 @@ import visit from "unist-util-visit";
 import { H } from "mdast-util-to-hast";
 import all from "./all.js";
 
-const RACE_PATTERN = /^race (.) (\d+) (.+)$/;
+const RACE_PATTERN = /race (.) (\d+) (.+)$/;
 
 function isRace(node: unknown): node is Paragraph {
   if (!isParagraph(node)) {
     return false;
   }
+  console.log(node.children);
 
   const { children } = node;
 

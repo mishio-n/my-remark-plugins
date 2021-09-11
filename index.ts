@@ -39,26 +39,15 @@ const parseMarkdown = (markdown: string) =>
     .processSync(markdown)
     .toString();
 
-const info = parseMarkdown(`:::note info\nhoge\n:::`);
+const info = parseMarkdown(
+  `:::note info\nmarkdown\n:::\n\n:::note warn\nmarkdown\n:::\n`
+);
 console.log(info);
 
-const warn = parseMarkdown(`:::note warn\nhoge\n:::`);
-console.log(warn);
-
-const alert = parseMarkdown(`:::note alert\nhoge\n:::`);
-console.log(alert);
-
-const honmei = parseMarkdown("race ◎ 15 バメイ");
-console.log(honmei);
-
-const taikou = parseMarkdown("race ○ 15 バメイ");
-console.log(taikou);
-
-const tanana = parseMarkdown("race ▲ 15 バメイ");
-console.log(tanana);
-
-const renshita = parseMarkdown("race △ 15 バメイ");
-console.log(renshita);
+const race = parseMarkdown(
+  "race ◎ 15 バメイ\n\nrace ○ 15 バメイ\n\nrace ▲ 15 バメイ\n\nrace △ 15 バメイ\n"
+);
+console.log(race);
 
 const raceplan = parseMarkdown(":::raceplan\nraceplan\n:::");
 console.log(raceplan);
